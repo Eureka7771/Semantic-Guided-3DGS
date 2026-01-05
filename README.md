@@ -247,11 +247,11 @@ Our experiments demonstrate:
 
 If you find this work useful, please cite:
 ```bibtex
-@mastersthesis{huang2024semantic3dgs,
+@mastersthesis{huang2025semantic3dgs,
   author    = {Huang, Yucheng},
   title     = {Semantic-Guided 3D Gaussian Splatting for Resource-Efficient Indoor Scene Reconstruction},
   school    = {Nanyang Technological University},
-  year      = {2024},
+  year      = {2025},
   type      = {MSc Thesis},
   address   = {Singapore}
 }
