@@ -80,9 +80,8 @@ Achieves **stable training** with 1.1M Gaussians vs baseline requiring 2.5-3.2M 
 
 ### Step 1: Clone Repository
 ```bash
-git clone https://github.com/Eureka7771/semantic-3dgs-github.git
-cd semantic-3dgs-github
-git submodule update --init --recursive
+git clone https://github.com/Eureka7771/Semantic-Guided-3DGS.git
+cd Semantic-Guided-3DGS
 ```
 
 ### Step 2: Create Conda Environment
@@ -93,12 +92,14 @@ conda activate semantic_3dgs
 
 ### Step 3: Install Submodules
 ```bash
-# Install diff-gaussian-rasterization
-pip install submodules/diff-gaussian-rasterization
+# Install diff-gaussian-rasterization (CUDA extension)
+pip install git+https://github.com/graphdeco-inria/diff-gaussian-rasterization.git
 
-# Install simple-knn
-pip install submodules/simple-knn
+# Install simple-knn (CUDA extension)
+pip install git+https://github.com/camenduru/simple-knn.git
 ```
+
+**Note**: These are CUDA extensions and require a working CUDA compiler (`nvcc`). Make sure CUDA toolkit is properly installed.
 
 ### Step 4: Download SAM Checkpoint
 ```bash
