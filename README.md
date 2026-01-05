@@ -76,7 +76,7 @@ Achieves **stable training** with 1.1M Gaussians vs baseline requiring 2.5-3.2M 
 - Linux (tested on Ubuntu 20.04)
 - CUDA 11.8+
 - Python 3.9+
-- 12GB+ GPU memory (RTX 3060 or better)
+- 12GB+ GPU memory (RTX 4080 or better)
 
 ### Step 1: Clone Repository
 ```bash
