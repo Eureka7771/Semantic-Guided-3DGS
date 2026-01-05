@@ -224,6 +224,8 @@ semantic-3dgs-github/
 └── configs/                       # Configuration files
 ```
 
+*Note: Only key files are shown. See the repository for complete file listings.*
+
 ---
 
 ## 🔬 Ablation Studies
