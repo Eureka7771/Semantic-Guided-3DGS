@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+env/
+venv/
+ENV/
+.venv
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Training outputs
+output/
+logs/
+wandb/
+tensorboard/
+
+# Data & Checkpoints
+data/
+datasets/
+checkpoints/
+*.pth
+*.pt
+*.ply
+*.bin
+
+# SAM preprocessed (large files)
+*/sam_preprocessed/
+sam_preprocessed/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# Compiled
+*.o
+*.a
+submodules/*/build/
+submodules/*/dist/
+
+# Temporary
+tmp/
+temp/
+*.tmp

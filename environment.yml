@@ -1,0 +1,38 @@
+name: semantic_3dgs
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch=2.0.0
+  - torchvision=0.15.0
+  - torchaudio=2.0.0
+  - cudatoolkit=11.8
+  - pip
+  
+  # Basic dependencies
+  - numpy
+  - pillow
+  - tqdm
+  - pyyaml
+  - plyfile
+  
+  - pip:
+    # 3D Gaussian Splatting core (submodules need to be installed separately)
+    - opencv-python
+    - joblib
+    
+    # Segment Anything Model (SAM)
+    - git+https://github.com/facebookresearch/segment-anything.git
+    
+    # CLIP
+    - ftfy
+    - regex
+    - git+https://github.com/openai/CLIP.git
+    
+    # Additional utilities
+    - scipy
+    - scikit-image
+    - matplotlib
+    - tensorboard

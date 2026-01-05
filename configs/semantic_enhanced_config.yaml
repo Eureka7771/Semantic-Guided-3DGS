@@ -1,0 +1,45 @@
+# 语义增强3DGS配置
+inherit: configs/base_config.yaml
+
+semantic:
+  # SAM配置
+  sam_model_high: "vit_h"  # 高精度版本
+  sam_model_mobile: "vit_b"  # 移动端版本
+  sam_checkpoint_high: "checkpoints/sam/sam_vit_h_4b8939.pth"
+  sam_checkpoint_mobile: "checkpoints/sam/sam_vit_b_01ec64.pth"
+  
+  # CLIP配置
+  clip_model: "ViT-B/32"
+  text_prompts: ["face", "text", "detailed_texture", "important object"]
+  
+  # 语义初始化参数（SAM-SI）
+  semantic_weight: 0.7
+  background_weight: 0.2
+  coverage_threshold: 0.3
+  virtual_point_ratio: 0.5
+  
+  # 动态优先级分裂参数（SAM-RPS）
+  early_stage_ratio: 0.7
+  late_stage_ratio: 0.2
+  semantic_boost_factor: 2.0
+  
+  # 探索性分裂参数（SAM-ES）
+  iou_threshold: 0.5
+  color_error_threshold: 0.1
+  semantic_hole_threshold: 0.3
+  
+performance:
+  # 多GPU配置
+  sam_gpu: 0
+  render_gpu: 0
+  
+  # 优化配置
+  mixed_precision: True
+  feature_cache: True
+  cache_size: 1000
+  batch_size: 4
+  
+  # 移动端优化
+  use_mobile_sam: False
+  target_fps: 30
+  max_gaussians_mobile: 50000
